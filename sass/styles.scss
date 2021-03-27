@@ -1,0 +1,362 @@
+/*** IMPORTS ***/
+@import "fonts/fonts";
+@import "variables";
+
+
+
+//tipografía Poppis
+//tamaños: textos normales 16px, título principal 59px y título secundario 19px.
+//El color corporativo es #189E90
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	.owl-carousel,
+	.owl-carousel.owl-theme {
+		position: relative;
+		overflow: hidden;
+
+		.owl-stage {
+			display: flex;
+			transition: transform 1.5s ease-in-out, width 0s ease-in-out !important;
+
+			.owl-item {
+				flex: 1;
+			}
+		}
+
+		.item {
+			width: 100%;
+			height: 100%;
+			background: $corporate-2;
+
+			.item-container {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				@media (min-width: 992px) {
+					flex-direction: row;
+				}
+
+				.item-content {
+					width: 100%;
+					@media (min-width: 992px) {
+						width: 50%;
+					}
+
+					&.image {
+						display: flex;
+						flex: 1;
+
+						img {
+							width: 100%;
+							max-width: 100%;
+							height: auto;
+							object-fit: cover;
+						}
+					}
+
+					&.text {
+						padding: 64px 16px 160px;
+						//background: $corporate-2;
+						
+						@media (min-width: 768px) {
+							padding: 64px 80px 160px;
+						}
+						@media (min-width: 1280px) {
+							padding: 80px 120px 120px;
+						}
+
+						h3 {
+							font-family: $font-poppins-bold;
+							font-size: 19px;
+							color: $corporate-1;
+						}
+					
+						h2 {
+							margin: 32px 0 24px;
+							font-family: $font-poppins-black;
+							font-size: 59px;
+							color: $black;
+							line-height: 1.3;
+						}
+
+						p {
+							font-family: $font-poppins-regular;
+							font-size: 16px;
+							color: $black;
+						}
+
+						.button-wrapper {
+							display: flex;
+							flex-wrap: wrap;
+							margin: 24px -12px 0;
+							@media (min-width: 992px) {
+								margin: 10px -12px 0;
+							}
+
+							.button {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 100%;
+								min-width: 200px;
+								height: 60px;
+								margin: 24px 12px 0;
+								padding: 16px 24px;
+								font-family: $font-poppins-light;
+								font-size: 16px;
+								text-align: center;
+								text-decoration: none;
+								border-radius: 4px;
+								@media (min-width: 768px) {
+									width: 200px;
+									margin: 20px 12px 0;
+								}
+
+								.icon {
+									position: relative;
+									display: flex;
+									width: 18px;
+									height: 8px;
+									margin-left: 14px;
+
+									&:before,
+									&:after {
+										content: '';
+										position: absolute;
+										top: 0;
+										bottom: 0;
+										margin: auto;
+										transition: .3s ease-in-out;
+									}
+
+									&:before {
+										right: 0;
+										left: 0;
+										width: 8px;
+										height: 8px;
+										background: transparent;
+										transform: rotate(-45deg);
+									}
+
+									&:after {
+										width: 14px;
+										height: 1px;
+										top: 0;
+										right: calc(50% - 5px);
+									}
+
+								}
+	
+								&.primary {
+									background: $corporate-1;
+									color: $white;
+
+									.icon {
+										&:before {
+											border: 1px solid $white;
+											border-top: 0;
+											border-left: 0;
+										}
+						
+										&:after {
+											background: $white;
+										}
+									}
+								}
+	
+								&.secondary {
+									color: $corporate-1;
+									border: 1px solid $corporate-1;
+
+									.icon {
+										&:before {
+											border: 1px solid $corporate-1;
+											border-top: 0;
+											border-left: 0;
+										}
+						
+										&:after {
+											background: $corporate-1;
+										}
+									}
+								}
+
+								&:hover {
+									.icon {
+										&:before {
+											transform: rotate(-45deg) translate(3px, 3px);
+										}
+					
+										&:after {
+											transform: translate(5px, 0);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.owl-nav,
+		.owl-dots {
+			position: absolute;
+		}
+
+		.owl-nav {
+			display: none;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			@media (min-width: 768px) {
+				display: flex;
+			}
+			@media (min-width: 992px) {
+				//right: auto;
+				left: 0;
+				width: fit-content;
+			}
+
+			button.owl-prev,
+			button.owl-next {
+				position: relative;
+				width: 60px;
+				height: 60px;
+				margin: 0;
+				padding: 0 !important;
+				font-size: 0;
+				outline: none;
+				transition: background .3s ease-in-out;
+				@media (min-width: 1280px) {
+					width: 80px;
+					height: 80px;
+				}
+
+				&:before,
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					transition: .3s ease-in-out;
+				}
+
+				&:before {
+					right: 0;
+					left: 0;
+					width: 8px;
+					height: 8px;
+					background: transparent;
+				}
+
+				&:after {
+					width: 14px;
+					height: 1px;
+					top: 0;
+				}
+			}
+
+			button.owl-prev {
+				background: $white;
+				border-radius: 0;
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+				border-bottom: 1px solid $corporate-2;
+
+				&:before {
+					border: 1px solid $black;
+					border-top: 0;
+					border-right: 0;
+					transform: rotate(45deg);
+				}
+
+				&:after {
+					left: calc(50% - 5px);
+					background: $black;
+				}
+
+				&:hover {
+					background: rgba($white, .8);
+
+					&:before {
+						transform: rotate(45deg) translate(-3px, 3px);
+					}
+
+					&:after {
+						transform: translate(-5px, 0);
+					}
+				}
+			}
+
+			button.owl-next {
+				background: $corporate-1;
+				border-radius: 0;
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+				
+				&:before {
+					border: 1px solid $white;
+					border-top: 0;
+					border-left: 0;
+					transform: rotate(-45deg);
+				}
+
+				&:after {
+					right: calc(50% - 5px);
+					background: $white;
+				}
+
+				&:hover {
+					background: $aquamarine-light;
+
+					&:before {
+						transform: rotate(-45deg) translate(3px, 3px);
+					}
+
+					&:after {
+						transform: translate(5px, 0);
+					}
+				}
+			}
+		}
+
+		.owl-dots {
+			//bottom: 64px;
+			bottom: 80px;
+			right: 0;
+			left: 0;
+			margin: 0 -7px;
+			@media (min-width: 992px) {
+				right: auto;
+				left: calc(50% + 80px);
+			}
+			@media (min-width: 1280px) {
+				bottom: 40px;
+				left: calc(50% + 120px);
+			}
+
+			.owl-dot {
+				outline: none;
+
+				span {
+					background: $aquamarine-light;
+				}
+
+				&.active {
+					span {
+						background: $corporate-1;
+					}
+				}
+			}
+		}
+	}
+
+}
