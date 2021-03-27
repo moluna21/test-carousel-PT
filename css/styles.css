@@ -33,14 +33,6 @@
   font-display: swap;
   src: local("Poppins Bold"), url("../fonts/poppins-700.woff2") format("woff2"), url("../fonts/poppins-700.woff") format("woff");
 }
-/* poppins-800 - latin */
-@font-face {
-  font-family: "Poppins ExtraBold";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: local("Poppins ExtraBold"), url("../fonts/poppins-latin-800.woff2") format("woff2"), url("../fonts/poppins-latin-800.woff") format("woff");
-}
 /* poppins-900 - latin */
 @font-face {
   font-family: "Poppins Black";
@@ -66,7 +58,6 @@ body .owl-carousel.owl-theme {
 body .owl-carousel .owl-stage,
 body .owl-carousel.owl-theme .owl-stage {
   display: flex;
-  transition: transform 1.5s ease-in-out, width 0s ease-in-out !important;
 }
 body .owl-carousel .owl-stage .owl-item,
 body .owl-carousel.owl-theme .owl-stage .owl-item {
@@ -217,19 +208,22 @@ body .owl-carousel.owl-theme .item .item-container .item-content.text .button-wr
   top: 0;
   right: calc(50% - 5px);
 }
-body .owl-carousel .item .item-container .item-content.text .button-wrapper .button.primary,
-body .owl-carousel.owl-theme .item .item-container .item-content.text .button-wrapper .button.primary {
+body .owl-carousel .item .item-container .item-content.text .button-wrapper .button.button-promotion,
+body .owl-carousel.owl-theme .item .item-container .item-content.text .button-wrapper .button.button-promotion {
   background: #1DC3B3;
   color: #FFFFFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-body .owl-carousel .item .item-container .item-content.text .button-wrapper .button.primary .icon:before,
-body .owl-carousel.owl-theme .item .item-container .item-content.text .button-wrapper .button.primary .icon:before {
+body .owl-carousel .item .item-container .item-content.text .button-wrapper .button.button-promotion .icon:before,
+body .owl-carousel.owl-theme .item .item-container .item-content.text .button-wrapper .button.button-promotion .icon:before {
   border: 1px solid #FFFFFF;
   border-top: 0;
   border-left: 0;
 }
-body .owl-carousel .item .item-container .item-content.text .button-wrapper .button.primary .icon:after,
-body .owl-carousel.owl-theme .item .item-container .item-content.text .button-wrapper .button.primary .icon:after {
+body .owl-carousel .item .item-container .item-content.text .button-wrapper .button.button-promotion .icon:after,
+body .owl-carousel.owl-theme .item .item-container .item-content.text .button-wrapper .button.button-promotion .icon:after {
   background: #FFFFFF;
 }
 body .owl-carousel .item .item-container .item-content.text .button-wrapper .button.secondary,

@@ -39,16 +39,6 @@
 		url('../fonts/poppins-700.woff2') format('woff2'), /* Super Modern Browsers */
 		url('../fonts/poppins-700.woff') format('woff'), /* Modern Browsers */
 }
-/* poppins-800 - latin */
-@font-face {
-	font-family: 'Poppins ExtraBold';
-	font-style: normal;
-	font-weight: 800;
-	font-display: swap;
-	src: local('Poppins ExtraBold'),
-		url('../fonts/poppins-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/poppins-latin-800.woff') format('woff'), /* Modern Browsers */
-}
 /* poppins-900 - latin */
 @font-face {
 	font-family: 'Poppins Black';
